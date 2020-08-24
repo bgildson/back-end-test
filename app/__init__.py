@@ -36,6 +36,17 @@ def create_app(flask_env=None, *args, **kwargs) -> Flask:
     # load app configurations
     app.config.from_object(CONFIG_NAME_MAPPER[flask_env])
 
+    # initialize the database
+    from .utils.db import db
+
+    db.init_app(app)
+
+    # initialize the migrations cli
+    from flask_migrate import Migrate
+
+    migrate = Migrate()
+    migrate.init_app(app, db=db)
+
     # initialize modules
     from app import modules
 

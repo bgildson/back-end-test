@@ -8,6 +8,9 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = "^3.7"
 flask = "^1.1.2"
+flask-sqlalchemy = "^2.4.4"
+psycopg2-binary = "^2.8.5"
+flask-migrate = "^2.5.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.0.1"
