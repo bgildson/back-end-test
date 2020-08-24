@@ -1,0 +1,19 @@
+**/__pycache__
+**/*.pyc
+**/*.pyo
+**/*.sqlite*
+
+**/.env*
+!**/.env.template
+.idea
+.vscode/settings.json
+
+// local files
+**/.DS_Store
+.coverage
+.pgdata
+.pgadmin
+.pytest_cache
+coverage.xml
+htmlcov
+config_local.py
