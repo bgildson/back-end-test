@@ -1,0 +1,7 @@
+# -*- coding: utf-8 -*-
+
+from config import BaseConfig
+
+
+class LocalConfig(BaseConfig):
+    pass
