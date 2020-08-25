@@ -18,7 +18,7 @@ class BaseConfig:
 class DevelopmentConfig(BaseConfig):
     DEBUG = True
 
-    SQLALCHEMY_DATABASE_URI = 'postgres://postgres:postgres@db:5432/flask_base'
+    SQLALCHEMY_DATABASE_URI = 'postgres://postgres:postgres@db:5432/evolux_challenge'
 
 
 class TestingConfig(BaseConfig):
