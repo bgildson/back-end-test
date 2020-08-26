@@ -19,11 +19,11 @@ def register():
     Handle requests to register a new user
     """
     try:
-        data = request.get_json()
-
-        errors = register_schema.validate(data)
+        errors = register_schema.validate(request.get_json())
         if errors:
             return jsonify(errors=errors), 400
+
+        data = register_schema.load(request.get_json())
 
         user = User.get_by_username(data['username'])
         if user:
@@ -51,11 +51,11 @@ def login():
     Handle requests to make login
     """
     try:
-        data = request.get_json()
-
-        errors = login_schema.validate(data)
+        errors = login_schema.validate(request.get_json())
         if errors:
             return jsonify(errors=errors), 400
+
+        data = login_schema.load(request.get_json())
 
         user = User.get_by_username_and_password(data['username'], data['password'])
         if not user:
