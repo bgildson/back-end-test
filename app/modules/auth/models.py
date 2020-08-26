@@ -29,14 +29,14 @@ class User(db.Model):
         self.set_password(password)
 
     @classmethod
-    def get_by_username(self, username) -> User:
+    def get_by_username(cls, username) -> User:
         """
         Get an user with an username equals to the username parameter
         """
         return User.query.filter_by(username=username).first()
 
     @classmethod
-    def get_by_username_and_password(self, username, password) -> User:
+    def get_by_username_and_password(cls, username, password) -> User:
         """
         Get an user that matches the username and the password
         """
