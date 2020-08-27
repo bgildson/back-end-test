@@ -5,6 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.dev
+    image: evolux-challenge-app:dev
     container_name: evolux-challenge-app
     command: sleep infinity
     environment:
