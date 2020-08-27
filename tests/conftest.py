@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 
+from flask import Flask
+from flask_jwt_extended import create_access_token
+from flask_sqlalchemy import SQLAlchemy
 import pytest
 
 from app import create_app
@@ -16,15 +19,25 @@ def app():
 
 
 @pytest.fixture(scope='session')
-def client(app):
+def client(app: Flask):
     """
     Creates a http client injectable in session level
     """
     return app.test_client()
 
 
+@pytest.fixture(scope='session')
+def aclient(app: Flask, access_token: str):
+    """
+    Creates an authenticated http client injectable in session level
+    """
+    client = app.test_client()
+    client.environ_base['HTTP_AUTHORIZATION'] = f'JWT {access_token}'
+    return client
+
+
 @pytest.fixture(scope='session', autouse=True)
-def db(app):
+def db(app: Flask):
     """
     Creates the tests db injectable in session level
     """
@@ -37,7 +50,7 @@ def db(app):
 
 
 @pytest.fixture(scope='session')
-def user(db):
+def user(db: SQLAlchemy):
     """
     Creates an user that could be used in the tests
     """
@@ -51,3 +64,10 @@ def user(db):
         'username': user.username,
         'password': password,
     }
+
+
+@pytest.fixture(scope='session')
+def access_token(app: Flask, user: User):
+    with app.test_request_context():
+        u = User.get_by_username(user['username'])
+        return create_access_token(u)
