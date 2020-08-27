@@ -7,6 +7,9 @@ services:
       dockerfile: Dockerfile.dev
     container_name: evolux-challenge-app
     command: sleep infinity
+    environment:
+      - FLASK_APP=app
+      - FLASK_ENV=development
     volumes:
       - .:/home/flask/app
     ports:
