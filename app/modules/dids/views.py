@@ -8,7 +8,7 @@ from .models import DID
 from .schemas import DIDSchema
 
 
-bp = Blueprint('dids', __name__, url_prefix='/dids')
+bp = Blueprint('dids', __name__, url_prefix='/api/dids')
 did_schema = DIDSchema()
 
 

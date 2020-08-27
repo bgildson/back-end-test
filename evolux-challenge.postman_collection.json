@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "71b4c4fd-9840-40af-88af-54f5f1c6e78b",
+		"_postman_id": "127e430d-6a36-4539-9317-c0ea12f0d73e",
 		"name": "evolux-challenge",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -14,7 +14,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "4be48446-882d-45b1-87e5-4149121b31a2",
+								"id": "05d57cea-0521-414d-9522-c5fbe0df2cf6",
 								"exec": [
 									"// save the token to future requests",
 									"",
@@ -62,7 +62,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "463a1b8a-09b4-4ac3-aae8-6fbb725445dc",
+								"id": "7003a315-7f35-461d-8b80-dadcc57a1f46",
 								"exec": [
 									"// save the token to future requests",
 									"",
@@ -122,13 +122,14 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:5000/dids/",
+							"raw": "http://localhost:5000/api/dids/",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "5000",
 							"path": [
+								"api",
 								"dids",
 								""
 							]
@@ -148,14 +149,16 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:5000/dids?start=0&size=20",
+							"raw": "http://localhost:5000/api/dids/?start=0&size=20",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "5000",
 							"path": [
-								"dids"
+								"api",
+								"dids",
+								""
 							],
 							"query": [
 								{
@@ -183,13 +186,14 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:5000/dids/7ee205a3-9302-4aca-bb7d-aa6132be43d0",
+							"raw": "http://localhost:5000/api/dids/7ee205a3-9302-4aca-bb7d-aa6132be43d0",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "5000",
 							"path": [
+								"api",
 								"dids",
 								"7ee205a3-9302-4aca-bb7d-aa6132be43d0"
 							]
@@ -218,13 +222,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/dids/",
+							"raw": "http://localhost:5000/api/dids/",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "5000",
 							"path": [
+								"api",
 								"dids",
 								""
 							]
@@ -253,13 +258,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/dids/7ee205a3-9302-4aca-bb7d-aa6132be43d0",
+							"raw": "http://localhost:5000/api/dids/7ee205a3-9302-4aca-bb7d-aa6132be43d0",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "5000",
 							"path": [
+								"api",
 								"dids",
 								"7ee205a3-9302-4aca-bb7d-aa6132be43d0"
 							]
@@ -283,13 +289,14 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "http://localhost:5000/dids/7ee205a3-9302-4aca-bb7d-aa6132be43d0",
+							"raw": "http://localhost:5000/api/dids/7ee205a3-9302-4aca-bb7d-aa6132be43d0",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "5000",
 							"path": [
+								"api",
 								"dids",
 								"7ee205a3-9302-4aca-bb7d-aa6132be43d0"
 							]
@@ -302,7 +309,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "3d895a50-7644-4cdb-a41e-8acd07ff1e9f",
+						"id": "ab9cf0f9-2935-46d8-8aa4-8e0321153aad",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -312,7 +319,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "d48db000-ac37-46b3-aba5-16d17f218bd2",
+						"id": "813efb78-4574-4a7a-ac05-7f50e79f2cd5",
 						"type": "text/javascript",
 						"exec": [
 							""
