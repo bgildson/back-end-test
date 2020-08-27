@@ -1,0 +1,15 @@
+.git
+.idea
+.pgadmin
+.pgdata
+.vscode
+**/__pycache__
+**/.DS_Store
+**/*.pyc
+**/*.pyo
+**/*.sqlite*
+.coverage
+.pytest_cache
+coverage.xml
+htmlcov
+config_local.py
